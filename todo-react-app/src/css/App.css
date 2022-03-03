@@ -1,0 +1,93 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 40px 0px 0px 0px;
+  background-color: #f0efe9;
+  color: #606372;
+  display: flex;
+  justify-content: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.App {
+  width: 300px;
+  height: 450px;
+  background-color: white;
+}
+.date{
+  padding: 0;
+  margin: 0;  
+}
+.date-text{
+  font-size: 30px;
+  font-weight: 400;
+  margin: 5px;
+}
+.month-text {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.year-text{
+  font-size: 10px;
+  font-weight: bold;
+  color: #b9bac0;
+}
+.day-of-week{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 20px;
+}
+.task-list{
+  height: 330px;
+  overflow: auto;
+}
+.task{
+  margin-top: 25px;
+}
+.task-name{
+  font-size: 12px;
+  font-weight: 500;
+
+}
+.completed-task{
+  font-size: 13px;
+  font-weight: 500;
+  color: #b9bac0 ;
+}
+.disable-radio-btn {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #b9bac0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.checked-img{
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: 2px solid #50e3a4; */
+  /* padding: 1px; */
+}
+
+/* .disable-radio-btn:checked {
+  background-color: #50e3a4;
+  border: 2px solid white;
+  outline: 1px solid #50e3a4;
+} */
+.add-button>button{
+  background-color: #62e9b1;
+  color: #47c18d;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  padding: 5px 0px 0px 0px;
+}
+.add-button>button:hover{
+  border-color: #606372;
+}
