@@ -1,32 +1,21 @@
 import React from 'react';
+
 import './css/App.css';
-import CurrentDate from './components/CurrentDate';
+import Header from './components/Header';
 import TaskList from './components/TaskList';
-import defaultTask from './components/DefaultTask';
+import AddTaskbutton from './components/AddTaskbutton';
 
 const App = () => {
-  //date object
-  const dateObj = new Date();
   return (
     <div className="App">
       <div className="current-date pt-3 d-flex justify-content-evenly">
-        <CurrentDate dateObj={dateObj}/>
+        <Header />
       </div>
       <div className="task-list ms-4 me-3 pe-1">
-        {
-          defaultTask.map((val) => {
-            return (
-              <TaskList 
-                key={val.id}
-                taskName={val.taskName}
-              />
-            )
-          })
-        }
+        <TaskList />
       </div>
       <div className="add-button d-flex justify-content-center mt-4">
-        <button className='btn btn-xl'><h3>+</h3></button>
-        
+        <AddTaskbutton />
       </div>
     </div>
   );

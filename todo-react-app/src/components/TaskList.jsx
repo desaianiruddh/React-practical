@@ -1,39 +1,23 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-mixed-spaces-and-tabs */
-import React, { useState } from 'react'
-import checkedImg from '../icon/checked.jpg'
+import React from 'react'
 
-const TaskList = (props) => {
-  const [taskDisable, setTaskDisable] = useState(false);
-  return (
-    <>
-      {
-        taskDisable &&
-				<div className="task d-flex justify-content-between">
-				  <div className="completed-task">{props.taskName}</div>
-				  <img 
-						src={checkedImg} 
-						alt="radio-icon" 
-						className='checked-img' 
-						onClick={()=>setTaskDisable(false)}
-					/>
-				</div>
-      }
-      {
-        !taskDisable &&
-				<div className="task d-flex justify-content-between">
-				  <div className="task-name">{props.taskName}</div>
-				  <input
-				    type="radio"
-				    defaultChecked={false}
-				    className="disable-radio-btn"
-				    onChange={() => setTaskDisable(true)}
-				  />
-				</div>
-      }
+import DefaultTasks from './DefaultTasks.json'
+import TaskAdder from './TaskAdder';
 
-    </>
-  )
+const TaskList = () => {
+	return (
+		<>
+			{
+				DefaultTasks.map((task) => {
+					return (
+						<TaskAdder
+							key={task.id}
+							taskName={task.taskName}
+						/>
+					)
+				})
+			}
+		</>
+	)
 }
 
 export default TaskList
