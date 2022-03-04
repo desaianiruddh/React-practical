@@ -7,7 +7,7 @@ class Header extends React.Component {
 		//Month name with short form
 		const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(dateObject);
 		return (
-			<>
+			<div>
 				<div className='date d-flex me-5'>
 					<div className="date-text">{('0' + dateObject.getDate()).slice(-2)}</div>
 					<div className='d-flex flex-column justify-content-center'>
@@ -16,7 +16,7 @@ class Header extends React.Component {
 					</div>
 				</div>
 				<div className='day ms-5'>{dateObject.toLocaleString('en-us', { weekday: 'long' })}</div>
-			</>
+			</div>
 		)
 	}
 }

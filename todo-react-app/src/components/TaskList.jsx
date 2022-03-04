@@ -5,7 +5,7 @@ import TaskAdder from './TaskAdder';
 
 const TaskList = () => {
 	return (
-		<>
+		<div>
 			{
 				DefaultTasks.map((task) => {
 					return (
@@ -16,7 +16,7 @@ const TaskList = () => {
 					)
 				})
 			}
-		</>
+		</div>
 	)
 }
 
