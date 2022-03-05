@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import checkedImg from '../icon/checked.jpg'
 
-const TaskAdder = (props) => {
+const AddNewTask = (props) => {
   const [isTaskCompleted, setIsTaskCompleted] = useState(false);
   return (
     <div className="task d-flex justify-content-between">
@@ -29,4 +29,4 @@ const TaskAdder = (props) => {
   )
 }
 
-export default TaskAdder
+export default AddNewTask

@@ -14,11 +14,11 @@ body {
   height: 450px;
   background-color: #fff;
 }
-.date {
+.date-container {
   padding: 0;
   margin: 0;  
 }
-.date-text {
+.date {
   font-size: 30px;
   font-weight: 400;
   margin: 5px;
@@ -65,7 +65,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-.add-button>button {
+.add-button {
   background-color: #62e9b1;
   color: #47c18d;
   border-radius: 30px;
@@ -73,6 +73,6 @@ body {
   width: 50px;
   padding: 5px 0px 0px 0px;
 }
-.add-button>button:hover {
+.add-button:hover {
   border-color: #606372;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DefaultTasks from './DefaultTasks.json'
-import TaskAdder from './TaskAdder';
+import AddNewTask from './AddNewTask';
 
 const TaskList = () => {
 	return (
@@ -9,7 +9,7 @@ const TaskList = () => {
 			{
 				DefaultTasks.map((task) => {
 					return (
-						<TaskAdder
+						<AddNewTask
 							key={task.id}
 							taskName={task.taskName}
 						/>
