@@ -13,8 +13,8 @@ class Header extends React.Component {
 		localStorage.setItem('todayDate',JSON.stringify(dateObject.getDate()));
 		return (
 			<>
-				<div className='date d-flex me-5'>
-					<div className="date-text">{date}</div>
+				<div className='date-container d-flex me-5'>
+					<div className="date">{date}</div>
 					<div className='d-flex flex-column justify-content-center'>
 						<div className="month">{month}</div>
 						<div className="year">{year}</div>
