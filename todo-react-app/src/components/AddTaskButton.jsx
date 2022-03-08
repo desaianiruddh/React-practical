@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-const getLocalTask = () => {
-  let localTaskList = localStorage.getItem('localTaskList');
-  if (localTaskList) {
-    return JSON.parse(localTaskList);
-  }
-  else {
-    return [];
-  }
-}
 const AddTaskButton = (props) => {
+  //destructing props
+  const { taskList, setTaskList } = props;
   //handle task add btn and input text
   const [tastAdder, setTaskAdder] = useState(false);
   const taskAddClicked = () => {
@@ -20,8 +13,6 @@ const AddTaskButton = (props) => {
   const taskTextAdder = (e) => {
     setTaskText(e.target.value);
   }
-  //state for task list
-  const [taskList, setTaskList] = useState(getLocalTask());
   //add task to tasklist
   const handleKeyPress = (key) => {
     //on pressing Enter
@@ -47,7 +38,6 @@ const AddTaskButton = (props) => {
   //local storage
   useEffect(() => {
     localStorage.setItem('localTaskList', JSON.stringify(taskList));
-    props.setTaskList(taskList);
   }, [taskList])
   return (
     <div>
