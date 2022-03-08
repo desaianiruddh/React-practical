@@ -1,0 +1,29 @@
+import React from 'react'
+
+class Header extends React.Component {
+	render() {
+		//date object
+		const dateObject = new Date();
+		const date = dateObject.getDate().toString().padStart(2, '0');
+		//Month name with short form
+		const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(dateObject);
+		const year = dateObject.getFullYear();
+		const day = dateObject.toLocaleString('en-us', { weekday: 'long' });
+		//set date for added task and keep in localstorage
+		localStorage.setItem('todayDate',JSON.stringify(dateObject.getDate()));
+		return (
+			<>
+				<div className='date-container d-flex me-5'>
+					<div className="date">{date}</div>
+					<div className='d-flex flex-column justify-content-center'>
+						<div className="month">{month}</div>
+						<div className="year">{year}</div>
+					</div>
+				</div>
+				<div className='day ms-5'>{day}</div>
+			</>
+		)
+	}
+}
+
+export default Header;
