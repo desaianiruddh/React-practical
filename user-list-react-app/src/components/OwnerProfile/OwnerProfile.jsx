@@ -13,7 +13,8 @@ const OwnerProfile = (props) => {
       <td
         className='d-flex'
         onMouseEnter={() => dispatch(mouseEnter(empProfileImg, empName, empEmail, isEmpActive))}
-        onMouseLeave={() => dispatch(mouseLeave())}>
+        onMouseLeave={() => dispatch(mouseLeave())}
+      >
         <span className='me-3'>
           <img className='profile-img' src={empProfileImg} alt="owner-profile" />
         </span>
@@ -27,7 +28,8 @@ const OwnerProfile = (props) => {
       <td>
         <Lock
           className='profile-icon'
-          onClick={() => alert('You Dont Have Access to Remove Owner')} />
+          onClick={() => alert('You Dont Have Access to Remove Owner')} 
+       />
       </td>
     </tr>
   );
