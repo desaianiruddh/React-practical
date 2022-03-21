@@ -16,7 +16,8 @@ const ProfileCard = (props) => {
           <div className='text-center emp-name'>
             {empName}
             <span
-              className={empStatus ? "active-dot ms-1 mb-2" : "inactive-dot ms-1 mb-2"}>
+              className={empStatus ? "active-dot ms-1 mb-2" : "inactive-dot ms-1 mb-2"}
+            >
             </span>
           </div>
           <div className='text-center emp-mail'> {empEmail} </div>
@@ -26,7 +27,8 @@ const ProfileCard = (props) => {
       <div className='mb-2 text-center'>
         <button
           type='button'
-          className={empStatus ? 'btn btn-warning' : 'btn btn-secondary'}>
+          className={empStatus ? 'btn btn-warning' : 'btn btn-secondary'}
+        >
           {empStatus ? 'Active User' : 'Inactive User'}
         </button>
       </div>
