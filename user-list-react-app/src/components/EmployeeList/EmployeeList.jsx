@@ -18,7 +18,8 @@ const EmployeeList = ({ empId, empProfileImg, empName, empEmail }) => {
       <td
         className='d-flex'
         onMouseEnter={() => dispatch(mouseEnter(empProfileImg, empName, empEmail, isEmpActive))}
-        onMouseLeave={() => dispatch(mouseLeave())}>
+        onMouseLeave={() => dispatch(mouseLeave())}
+      > 
         <span className='profile-img me-3'>
           <img className='profile-img' src={empProfileImg} alt="owner-profile" />
         </span>
@@ -44,7 +45,8 @@ const EmployeeList = ({ empId, empProfileImg, empName, empEmail }) => {
           src={deleteIcon}
           className='profile-icon'
           alt='delete-icon'
-          onClick={() => dispatch(removeEmployee(empId))} />
+          onClick={() => dispatch(removeEmployee(empId))} 
+       />
       </td>
     </tr>
   )
