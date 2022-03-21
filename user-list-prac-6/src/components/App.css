@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box
+}
+body {
+  margin: 0px;
+  background-color: #dee2e9;
+}
+.App {
+  background-color: #fff;
+  margin: 0px auto ;
+}
+.empty-list {
+  height: 100px;
+}
+.page-item .page-link {
+  border: 1px solid #dadada;
+  color: #000;
+}
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #6ccaa2;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
