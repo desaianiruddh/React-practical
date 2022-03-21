@@ -1,3 +1,6 @@
+.user-list {
+  height: 635px;
+}
 th {
   color: #4d4d55;
   font-weight: bold;
@@ -6,6 +9,12 @@ th {
 }
 td {
   padding: 7px 50px;
+}
+td:first-child {
+  width: 350px;
+}
+td:nth-child(2), td:nth-child(3) {
+  width: 200px;
 }
 .owner-status {
   color: #6ccaa2;
@@ -51,7 +60,10 @@ select {
               0px 6px 6px 0px rgba(0, 0, 0, 0.19);
 }
 @media only screen and (max-width: 970px) {
-	table , td{ 
+  .user-list {
+    height: auto;
+  }
+	table, td { 
 		display: flex;
     justify-content:center;
     width: 100%;
@@ -69,6 +81,9 @@ select {
 		border-bottom: 1px solid #848387; 
     padding: 7px 70px;
 	}
+  td:first-child, td:nth-child(2), td:nth-child(3) {
+    width: auto;
+  }
   .profile-icon:hover {
     height: 20px;
   }

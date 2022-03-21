@@ -9,13 +9,13 @@ const empListReducer = (state = initialData, action) => {
       return {
         ...state,
         empListData: [...state.empListData, ...payload]
-      }
+      };
     }
     case 'REMOVE_EMPLOYEE':
       return {
         ...state,
         empListData: state.empListData.filter((empInfo) => payload !== empInfo.empId)
-      }
+      };
 
     default: return state;
   }

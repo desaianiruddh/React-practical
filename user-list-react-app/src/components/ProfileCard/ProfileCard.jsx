@@ -1,16 +1,16 @@
 import React from 'react'
 import { ProgressBar } from 'react-bootstrap';
 
-import './profileCard.css'
+import './profileCard.css';
 
 const ProfileCard = (props) => {
-  const { empData: { profileImg, empName, empEmail, empStatus } } = props;
+  const { empData: { empProfileImg, empName, empEmail, empStatus } } = props;
   let reviewClick = Math.floor((Math.random() * (0.5) * 10000));
   return (
     <div className='profile-card bg-white'>
       <div className='img-and-info'>
         <div className='mb-2 text-center'>
-          <img className='emp-card-img' src={profileImg} alt="owner" />
+          <img className='emp-card-img' src={empProfileImg} alt="owner" />
         </div>
         <div>
           <div className='text-center emp-name'>
@@ -49,7 +49,7 @@ const ProfileCard = (props) => {
         </span>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProfileCard
+export default ProfileCard;

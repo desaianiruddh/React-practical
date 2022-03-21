@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
 
-import './profileList.css'
-import OwnerProfile from '../OwnerProfile/OwnerProfile'
-import EmployeeList from '../EmployeeList/EmployeeList'
-import ProfileCard from '../ProfileCard/ProfileCard'
+import './profileList.css';
+import OwnerProfile from '../OwnerProfile/OwnerProfile';
+import EmployeeList from '../EmployeeList/EmployeeList';
+import ProfileCard from '../ProfileCard/ProfileCard';
+import EmptyEmployee from '../EmptyEmployee/EmptyEmployee';
 
 const ProfileList = () => {
-  const cardData = useSelector((state) => state.cardData.data);
   const userList = useSelector((state) => state.empList.empListData);
+  const cardData = useSelector((state) => state.cardData.data);
   return (
     <div className='user-list'>
       <table border='0'>
@@ -22,13 +23,13 @@ const ProfileList = () => {
         <tbody>
           {
             userList.map((empInfo, index) => {
-              const { empId, profileImg, empName, empEmail, empStatus } = empInfo
+              const { empId, empProfileImg, empName, empEmail, empStatus } = empInfo
               if (empId === '1') {
                 return (
                   <OwnerProfile
                     key={empId}
                     empId={empId}
-                    profileImg={profileImg}
+                    empProfileImg={empProfileImg}
                     empName={empName}
                     empEmail={empEmail}
                   />
@@ -39,7 +40,7 @@ const ProfileList = () => {
                   <EmployeeList
                     key={empId}
                     empId={empId}
-                    profileImg={profileImg}
+                    empProfileImg={empProfileImg}
                     empName={empName}
                     empEmail={empEmail}
                     empStatus={empStatus}
@@ -51,13 +52,15 @@ const ProfileList = () => {
         </tbody>
       </table>
       {
-        cardData !== false &&
-        <ProfileCard
-          empData={cardData}
-        />
+        userList.length === 1
+        && <EmptyEmployee />
+      }
+      {
+        cardData !== false
+        && <ProfileCard empData={cardData} />
       }
     </div>
-  )
+  );
 }
 
-export default ProfileList
+export default ProfileList;

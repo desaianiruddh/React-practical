@@ -1,26 +1,26 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import deleteIcon from '../icon/delete.png'
-import { mouseEnter, mouseLeave, removeEmployee } from '../../actions/index.js'
+import deleteIcon from '../icon/delete.png';
+import { mouseEnter, mouseLeave, removeEmployee } from '../../actions/index.js';
 
-const EmployeeList = ({ empId, profileImg, empName, empEmail }) => {
-  const [isEmpActive, setIsEmpActive] = useState(true)
-  const dispatch = useDispatch()
+const EmployeeList = ({ empId, empProfileImg, empName, empEmail }) => {
+  const [isEmpActive, setIsEmpActive] = useState(true);
+  const dispatch = useDispatch();
   const handleOptionChange = (event) => {
-    const status = event.target.value
-    status === 'inactive' ?
-      setIsEmpActive(false) :
-      setIsEmpActive(true);
+    const status = event.target.value;
+    status === 'inactive'
+      ? setIsEmpActive(false)
+      : setIsEmpActive(true);
   }
   return (
     <tr>
       <td
         className='d-flex'
-        onMouseEnter={() => dispatch(mouseEnter({ profileImg, empName, empEmail, isEmpActive }))}
+        onMouseEnter={() => dispatch(mouseEnter(empProfileImg, empName, empEmail, isEmpActive))}
         onMouseLeave={() => dispatch(mouseLeave())}>
         <span className='profile-img me-3'>
-          <img className='profile-img' src={profileImg} alt="owner-profile" />
+          <img className='profile-img' src={empProfileImg} alt="owner-profile" />
         </span>
         <span>
           <div className='emp-name'>{empName}</div>
@@ -50,4 +50,4 @@ const EmployeeList = ({ empId, profileImg, empName, empEmail }) => {
   )
 }
 
-export default EmployeeList
+export default EmployeeList;
