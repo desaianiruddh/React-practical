@@ -63,24 +63,24 @@ select {
   .user-list {
     height: auto;
   }
-	table, td { 
-		display: flex;
+  table, td { 
+    display: flex;
     justify-content:center;
     width: 100%;
-	}
-	/* Hide table headers */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	tr { 
+  }
+  /* Hide table headers */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { 
     border: 1px solid #4d4d55; 
   }
-	td { 
-		border-bottom: 1px solid #848387; 
+  td { 
+    border-bottom: 1px solid #848387; 
     padding: 7px 70px;
-	}
+  }
   td:first-child, td:nth-child(2), td:nth-child(3) {
     width: auto;
   }
