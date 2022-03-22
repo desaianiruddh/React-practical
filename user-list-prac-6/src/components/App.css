@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 body {
   margin: 0px;
@@ -7,7 +7,7 @@ body {
 }
 .App {
   background-color: #fff;
-  margin: 0px auto ;
+  margin: 0px auto;
 }
 .empty-list {
   height: 100px;
