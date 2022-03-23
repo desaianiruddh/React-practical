@@ -1,0 +1,62 @@
+[
+  {
+    "empId": "1",
+    "empProfileImg": "ProfilePictures/owner.jpg",
+    "empName": "Jana Strassmann",
+    "empEmail": "batz.mortimerayahoo.com"
+  },
+  {
+    "empId": "2",
+    "empProfileImg": "ProfilePictures/emp1.jpg",
+    "empName": "Jube Bowman",
+    "empEmail": "utrich.owen@kristin.bi"
+  },
+  {
+    "empId": "3",
+    "empProfileImg": "ProfilePictures/emp2.jpg",
+    "empName": "Kwak Seong-Min",
+    "empEmail": "kale_lehner@yahoo.com"
+  },
+  {
+    "empId": "4",
+    "empProfileImg": "ProfilePictures/emp3.jpg",
+    "empName": "Leon Hunt",
+    "empEmail": "utrich.owen@kristin.bi"
+  },
+  {
+    "empId": "5",
+    "empProfileImg": "ProfilePictures/emp4.jpg",
+    "empName": "Nombeko Mabandla",
+    "empEmail": "kale_lehner@yahoo.com"
+  },
+  {
+    "empId": "6",
+    "empProfileImg": "ProfilePictures/emp5.jpg",
+    "empName": "Nwoye Akachi",
+    "empEmail": "utrich.owen@kristin.bi"
+  },
+  {
+    "empId": "7",
+    "empProfileImg": "ProfilePictures/emp6.jpg",
+    "empName": "Paulina Gayoso",
+    "empEmail": "kale_lehner@yahoo.com"
+  },
+  {
+    "empId": "8",
+    "empProfileImg": "ProfilePictures/emp7.jpg",
+    "empName": "jack doe",
+    "empEmail": "batz.com"
+  },
+  {
+    "empId": "9",
+    "empProfileImg": "ProfilePictures/emp8.jpg",
+    "empName": "Phawta Tuntayakut",
+    "empEmail": "utrich.owen@kristin.biz"
+  },
+  {
+    "empId": "10",
+    "empProfileImg": "ProfilePictures/emp9.jpg",
+    "empName": "Kwak Seong",
+    "empEmail": "kale_lehner@hotmain.com"
+  }
+]

@@ -1,0 +1,90 @@
+.user-list {
+  height: 635px;
+}
+th {
+  color: #4d4d55;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 50px 14px 50px;
+}
+td {
+  padding: 7px 50px;
+}
+td:first-child {
+  width: 350px;
+}
+td:nth-child(2), td:nth-child(3) {
+  width: 200px;
+}
+.owner-status {
+  color: #6ccaa2;
+  font-weight: bold;
+}
+.owner-access {
+  color: #4d4d55;
+  font-weight: bold;
+}
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.emp-name {
+  font-size: 15px;
+  color: #4d4d55;
+  font-weight: bold;
+}
+.emp-mail {
+  font-size: 12px;
+  color: #848387;
+}
+select {
+  width: 100px;
+  height: 30px;
+  color: #4d4d55;
+  font-size: 15px;
+  background-color: #f8fafb;
+  padding: 5px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+}
+.profile-icon {
+  width: 15px;
+  height: 20px;
+  margin: 0px 20px;
+}
+.profile-icon:hover {
+  width: 17px;
+  height: 22px;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2), 
+              0px 6px 6px 0px rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 970px) {
+  .user-list {
+    height: auto;
+  }
+  table, td { 
+    display: flex;
+    justify-content:center;
+    width: 100%;
+  }
+  /* Hide table headers */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { 
+    border: 1px solid #4d4d55; 
+  }
+  td { 
+    border-bottom: 1px solid #848387; 
+    padding: 7px 70px;
+  }
+  td:first-child, td:nth-child(2), td:nth-child(3) {
+    width: auto;
+  }
+  .profile-icon:hover {
+    height: 20px;
+  }
+}
