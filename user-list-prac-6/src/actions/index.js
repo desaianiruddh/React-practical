@@ -4,7 +4,7 @@ export const fetchUserFromAPI = () => {
   return async (dispatch) => {
     dispatch(fetchUserRequest());
     try {
-      let userPage1 = await axios.get('https://reqres.in/api/users?page=1');
+      const userPage1 = await axios.get('https://reqres.in/api/users?page=1');  
       const userPage2 = await axios.get('https://reqres.in/api/users?page=2');
       dispatch(setDataToState(userPage1.data, userPage2.data));
       dispatch(changePage(1));
