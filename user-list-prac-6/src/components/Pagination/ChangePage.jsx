@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { changePage } from '../../actions/index.js';
+import { changePage } from '../../actions';
 
 const ChangePage = () => {
   const dispatch = useDispatch();

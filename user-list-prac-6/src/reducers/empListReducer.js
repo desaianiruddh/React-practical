@@ -1,8 +1,8 @@
 const initialData = {
   userDataPage1: [],
   userDataPage2: [],
-  empListData: []
-}
+  empListData: [],
+};
 
 const empListReducer = (state = initialData, action) => {
   const { type, payload } = action;
@@ -11,27 +11,30 @@ const empListReducer = (state = initialData, action) => {
       return {
         ...state,
         userDataPage1: [...state.userDataPage1, ...payload.userDataPage1.data],
-        userDataPage2: [...state.userDataPage2, ...payload.userDataPage2.data]
+        userDataPage2: [...state.userDataPage2, ...payload.userDataPage2.data],
       };
     }
     case 'CHANGE_PAGE': {
       return payload === 1
         ? {
-          ...state,
-          empListData: state.userDataPage1
-        }
+            ...state,
+            empListData: state.userDataPage1,
+          }
         : {
-          ...state,
-          empListData: state.userDataPage2
-        }
+            ...state,
+            empListData: state.userDataPage2,
+          };
     }
     case 'REMOVE_EMPLOYEE':
       return {
         ...state,
-        empListData: state.empListData.filter((empInfo) => payload !== empInfo.id)
+        empListData: state.empListData.filter(
+          (empInfo) => payload !== empInfo.id
+        ),
       };
-    default: return state;
+    default:
+      return state;
   }
-}
+};
 
 export default empListReducer;

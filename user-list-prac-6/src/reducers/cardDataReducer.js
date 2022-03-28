@@ -1,6 +1,7 @@
 const intialData = {
-  data: false
-}
+  data: {},
+  isCardVisible: false,
+};
 
 const cardDataReducer = (state = intialData, action) => {
   const { type, payload } = action;
@@ -8,17 +9,20 @@ const cardDataReducer = (state = intialData, action) => {
     case 'MOUSE_ENTER': {
       return {
         ...state,
-        data: payload
+        data: payload,
+        isCardVisible: true,
       };
     }
     case 'MOUSE_LEAVE': {
       return {
         ...state,
-        data: false
+        isCardVisible: false,
+        data: {},
       };
     }
-    default: return state;
+    default:
+      return state;
   }
-}
+};
 
 export default cardDataReducer;

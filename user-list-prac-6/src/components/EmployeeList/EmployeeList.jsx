@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Lock } from 'react-feather';
 
-import deleteIcon from '../icon/delete.png';
-import { mouseEnter, mouseLeave, removeEmployee } from '../../actions/index.js';
+import deleteIcon from '../../icon/delete.png';
+import { mouseEnter, mouseLeave, removeEmployee } from '../../actions';
 
 const EmployeeList = ({ empId, empProfileImg, empName, empEmail }) => {
   const dispatch = useDispatch();
@@ -49,13 +49,13 @@ const EmployeeList = ({ empId, empProfileImg, empName, empEmail }) => {
             </td>
           </>
           : <>
-            <td>
+            <td className='emp-status'>
               <select onChange={handleOptionChange}>
                 <option value='active' defaultValue>Active</option>
                 <option value='inactive'>Inactive</option>
               </select>
             </td>
-            <td>
+            <td className='emp-access'>
               <select>
                 <option value='manager' defaultValue>Manager</option>
                 <option value='read'>Read</option>

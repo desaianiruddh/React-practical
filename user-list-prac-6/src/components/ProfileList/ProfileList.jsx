@@ -6,10 +6,10 @@ import EmployeeList from '../EmployeeList/EmployeeList';
 import ProfileCard from '../ProfileCard/ProfileCard';
 
 const ProfileList = ({ userList }) => {
-  const cardData = useSelector((state) => state.cardData.data);
+  const { data, isCardVisible } = useSelector((state) => state.cardData);
   return (
-    <div className='user-list'>
-      <table border='0'>
+    <div className="user-list">
+      <table border="0">
         <thead>
           <tr>
             <th>Name</th>
@@ -18,29 +18,24 @@ const ProfileList = ({ userList }) => {
           </tr>
         </thead>
         <tbody>
-          {
-            userList.map((empInfo) => {
-              const { id, avatar, first_name, last_name, email } = empInfo
-              let empName = first_name + ' ' + last_name
-              return (
-                <EmployeeList
-                  key={id}
-                  empId={id}
-                  empProfileImg={avatar}
-                  empName={empName}
-                  empEmail={email}
-                />
-              );
-            })
-          }
+          {userList.map((empInfo) => {
+            const { id, avatar, first_name, last_name, email } = empInfo;
+            let empName = first_name + ' ' + last_name;
+            return (
+              <EmployeeList
+                key={id}
+                empId={id}
+                empProfileImg={avatar}
+                empName={empName}
+                empEmail={email}
+              />
+            );
+          })}
         </tbody>
       </table>
-      {
-        cardData !== false
-        && <ProfileCard empData={cardData} />
-      }
+      {isCardVisible && <ProfileCard empData={data} />}
     </div>
   );
-}
+};
 
 export default ProfileList;
