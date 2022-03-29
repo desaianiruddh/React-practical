@@ -51,7 +51,7 @@ select {
 nav {
   height: 40px;
 }
-div.pagination {
+.pagination {
   height: 10px;
 }
 .page-item.active .page-link {
