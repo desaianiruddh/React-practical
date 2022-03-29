@@ -15,7 +15,7 @@ const ProfileCard = (props) => {
         <div className="mb-2 text-center">
           <img className="emp-card-img" src={profileImg} alt="owner" />
         </div>
-        <div className='emp-card-info'>
+        <div className="emp-card-info">
           <div className="text-center emp-name mb-md-1">
             {empName}
             <span
@@ -51,8 +51,7 @@ const ProfileCard = (props) => {
           </div>
           <div className="emp-mail">click reviewed</div>
         </span>
-        <div class="headerDivider1"></div>
-        <div class="headerDivider2"></div>
+        <div className="headerDivider"></div>
         <span className="p-2">
           <div className="click-review">{reviewClick + 5000}</div>
           <div className="emp-mail">Monthly click</div>

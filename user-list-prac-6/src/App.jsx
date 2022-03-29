@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import './App.css';
 import EmptyEmployee from './components/EmptyEmployee/EmptyEmployee';
-import ChangePage from './components/Pagination/ChangePage';
 import { fetchUserFromAPI } from './actions';
 const ProfileList = React.lazy(() =>
   import('./components/ProfileList/ProfileList')
@@ -13,7 +12,7 @@ const App = () => {
   const userList = useSelector((state) => state.empList.empListData);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchUserFromAPI());
+    dispatch(fetchUserFromAPI(1));
   }, [dispatch]);
   return (
     <div className="App container">
@@ -28,7 +27,6 @@ const App = () => {
           }
         >
           <ProfileList userList={userList} />
-          <ChangePage />
         </Suspense>
       )}
     </div>

@@ -1,23 +1,15 @@
 .user-list {
-  height: 590px;
+  height: 595px;
 }
 th {
   color: #4d4d55;
   font-weight: bold;
   font-size: 18px;
-  padding: 5px 50px 14px 50px;
-  text-align: center;
+  padding: 5px 50px 10px 50px;
+  text-align: left;
 }
 td {
   padding: 20px 50px;
-}
-
-td:first-child {
-  width: 350px;
-}
-td:nth-child(2),
-td:nth-child(3) {
-  width: 200px;
 }
 .owner-status {
   color: #6ccaa2;
@@ -59,7 +51,16 @@ select {
 nav {
   height: 40px;
 }
-@media only screen and (max-width: 970px) {
+div.pagination {
+  height: 10px;
+}
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #6ccaa2;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+@media only screen and (max-width: 992px) {
   .user-list {
     height: auto;
     display: flex;
@@ -92,19 +93,14 @@ nav {
   }
   td:first-child,
   th:first-child {
-    padding: 10px 120px;
-    width: auto;
+    padding: 10px 150px;
   }
   td:nth-child(2),
   td:nth-child(3) {
-    width: auto;
     padding-top: 0px;
   }
   td:nth-child(4) {
     padding: 0px 30px;
-  }
-  td:first-child {
-    width: 440px;
   }
   .emp-status,
   .emp-access {

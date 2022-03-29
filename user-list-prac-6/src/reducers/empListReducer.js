@@ -1,29 +1,23 @@
 const initialData = {
-  userDataPage1: [],
-  userDataPage2: [],
   empListData: [],
+  totalPages: 0,
 };
 
 const empListReducer = (state = initialData, action) => {
   const { type, payload } = action;
   switch (type) {
-    case 'SET_DATA_TO_STATE': {
+    case 'FETCH_USER_SUCCESS': {
       return {
         ...state,
-        userDataPage1: [...state.userDataPage1, ...payload.userDataPage1.data],
-        userDataPage2: [...state.userDataPage2, ...payload.userDataPage2.data],
+        totalPages: payload.userListData.total_pages,
+        empListData: [...payload.userListData.data],
       };
     }
-    case 'CHANGE_PAGE': {
-      return payload === 1
-        ? {
-            ...state,
-            empListData: state.userDataPage1,
-          }
-        : {
-            ...state,
-            empListData: state.userDataPage2,
-          };
+    case 'FETCH_USER_FAILED': {
+      console.log(payload);
+      return {
+        ...state,
+      };
     }
     case 'REMOVE_EMPLOYEE':
       return {
