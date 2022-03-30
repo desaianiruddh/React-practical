@@ -1,16 +1,25 @@
 import axios from 'axios';
 
 export const fetchUserFromAPI = (pageNumber) => {
+  const source = axios.CancelToken.source();
+
   return async (dispatch) => {
     dispatch(fetchUserRequest());
     try {
       const userListData = await axios.get(
-        `https://reqres.in/api/users?page=${pageNumber}`
+        `https://reqres.in/api/users?page=${pageNumber}`,
+        {
+          cancelToken: source.token,
+        }
       );
       dispatch(fetchUserSuccess(userListData.data));
+      return source.cancel();
     } catch (error) {
-      const errMsg = error.message;
-      dispatch(fetchUserFailed(errMsg));
+      if (axios.isCancel(error)) console.log('caught cancel');
+      else {
+        const errMsg = error.message;
+        dispatch(fetchUserFailed(errMsg));
+      }
     }
   };
 };
