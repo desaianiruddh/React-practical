@@ -10,6 +10,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .progress {
   height: 7px;
@@ -45,6 +46,7 @@
   .emp-card-img {
     width: 70px;
     height: 70px;
+    object-fit: cover;
   }
   .img-and-info {
     display: flex;
