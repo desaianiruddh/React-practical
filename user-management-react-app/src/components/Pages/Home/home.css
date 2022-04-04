@@ -1,0 +1,24 @@
+.header {
+  border-bottom: #a6ccf7 3px solid;
+}
+.user-card {
+  border-radius: 15px;
+  box-shadow: #a6ccf7 0px 0px 0px 3px;
+}
+.nav-text {
+  font-size: 25px;
+}
+.user-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 576px) {
+  .nav-text,
+  .nav-btn {
+    font-size: 14px;
+  }
+  .nav-text {
+    padding-top: 7px;
+  }
+}
