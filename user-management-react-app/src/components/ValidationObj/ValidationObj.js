@@ -5,9 +5,11 @@ const ValidationObj = () => {
   return Yup.object({
     name: Yup.string()
       .required('*Name is Required')
+      .trim()
       .matches(/^[aA-zZ\s]+$/, 'Only alphabets are allowed for this field ')
       .min(15, '*Name must be at least 15 characters'),
     email: Yup.string()
+      .trim()
       .email('*Email is Invalid')
       .required('*Email is Required'),
     phoneNo: Yup.string()
@@ -26,7 +28,7 @@ const ValidationObj = () => {
       .required('*Confirm Password is Required'),
     profilePhoto: Yup.mixed()
       .nullable()
-      .required()
+      .required('*Profile Photo is Required')
       .test(
         'FILE_SIZE',
         'Uploaded Photo size should lesser than 2 MB',

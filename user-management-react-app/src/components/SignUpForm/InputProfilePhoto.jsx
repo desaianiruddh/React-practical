@@ -5,7 +5,7 @@ const InputProfilePhoto = ({ values, setFieldValue }) => {
   const [isImgUploaded, setIsImgUploaded] = useState(false);
   const profileImgRef = useRef(null);
   return (
-    <div className="mb-3">
+    <div className="mb-2">
       <input
         label="+photo"
         name="profilePhoto"
@@ -21,7 +21,7 @@ const InputProfilePhoto = ({ values, setFieldValue }) => {
       {isImgUploaded ? (
         <div className="text-center row">
           <span className="text-truncate col-9">
-            Uploaded file:- {isImgUploaded.name}{' '}
+            Uploaded file:- {isImgUploaded.name}
           </span>
           <span
             className="ms-1 col-2 text-danger"
@@ -38,10 +38,9 @@ const InputProfilePhoto = ({ values, setFieldValue }) => {
           className="text-center"
           onClick={() => profileImgRef.current.click()}
         >
-          photo+
+          photo +
         </div>
       )}
-
       <ErrorMessage name="profilePhoto" component="div" className="error" />
     </div>
   );

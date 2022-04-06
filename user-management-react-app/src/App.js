@@ -12,9 +12,7 @@ function App() {
   const isUserLoggedIn = useSelector((state) => state.userData.isUserLoggedIn);
   useEffect(() => {
     isUserLoggedIn ? navigate('/home') : navigate('/');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  }, [isUserLoggedIn, navigate]);
   return (
     <div className="app">
       <Routes>

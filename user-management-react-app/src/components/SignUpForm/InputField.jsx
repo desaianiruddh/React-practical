@@ -3,8 +3,9 @@ import { useField, ErrorMessage } from 'formik';
 
 const InputField = ({ label, ...props }) => {
   const [field, meta] = useField(props);
+
   return (
-    <div className="mb-3">
+    <div className="mb-2">
       <label htmlFor={field.name}>{label}</label>
       <input
         className={`text-field form-control ${
