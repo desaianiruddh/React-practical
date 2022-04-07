@@ -16,7 +16,7 @@ const Header = () => {
           className="btn btn-danger my-1 fw-bold nav-btn"
           onClick={() => {
             dispatch(logOut());
-            navigate('/');
+            navigate('/signup');
           }}
         >
           Log Out

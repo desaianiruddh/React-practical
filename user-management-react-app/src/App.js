@@ -11,12 +11,12 @@ function App() {
   const navigate = useNavigate();
   const isUserLoggedIn = useSelector((state) => state.userData.isUserLoggedIn);
   useEffect(() => {
-    isUserLoggedIn ? navigate('/home') : navigate('/');
+    isUserLoggedIn ? navigate('/home') : navigate('/signup');
   }, [isUserLoggedIn, navigate]);
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </div>

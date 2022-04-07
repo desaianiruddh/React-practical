@@ -3,9 +3,7 @@ import { useSelector } from 'react-redux';
 
 const UserCard = () => {
   const userData = useSelector((state) => state.userData.userLoginData);
-  console.log(userData);
   const { name, email, phoneNo, profilePhoto } = userData;
-
   return (
     <div className="mt-5 mx-5 d-flex justify-content-center">
       <div className="user-card bg-white p-5 text-center fs-4">
