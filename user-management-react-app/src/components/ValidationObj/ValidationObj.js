@@ -22,7 +22,11 @@ const ValidationObj = () => {
       ),
     password: Yup.string()
       .min(8, '*Password must be at least 8 characters')
-      .required('*Password is Required'),
+      .required('*Password is Required')
+      .matches(
+        /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])/,
+        'Must Have Uppercase, Lowercase, Number and Punctuation Mark'
+      ),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref('password'), null], '*Password Must Match')
       .required('*Confirm Password is Required'),
