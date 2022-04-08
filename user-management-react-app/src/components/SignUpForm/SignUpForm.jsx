@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import InputField from './InputField';
 import InputProfilePhoto from './InputProfilePhoto';
 import ValidationObj from '../ValidationObj/ValidationObj';
-import { submitForm } from '../../actions';
+import { logIn } from '../../actions';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -24,7 +24,8 @@ const SignUpForm = () => {
       initialValues={initialValues}
       validationSchema={ValidationObj}
       onSubmit={(values) => {
-        dispatch(submitForm(values));
+        values.profilePhoto = URL.createObjectURL(values.profilePhoto);
+        dispatch(logIn(values));
         navigate('/home');
         localStorage.setItem(
           'pic',

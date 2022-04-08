@@ -6,7 +6,7 @@ const intialData = {
 const userData = (state = intialData, action) => {
   const { type, payload } = action;
   switch (type) {
-    case 'SUBMIT_FORM': {
+    case 'LOG_IN': {
       return {
         ...state,
         isUserLoggedIn: true,

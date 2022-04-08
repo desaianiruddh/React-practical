@@ -1,10 +1,7 @@
-export const submitForm = (values) => {
+export const logIn = (values) => {
   return {
-    type: 'SUBMIT_FORM',
-    payload: {
-      ...values,
-      profilePhoto: URL.createObjectURL(values.profilePhoto),
-    },
+    type: 'LOG_IN',
+    payload: values,
   };
 };
 
